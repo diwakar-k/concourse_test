@@ -39,8 +39,8 @@ jobs:
             - name: source-repo
           run:
             path: /bin/sh
-            args:
-              - sh demo/create-pipeline.sh
+            args: ["./demo/create-pipeline.sh"]
+              
       - put: storage
         inputs: 
           - source-repo
