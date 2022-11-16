@@ -8,6 +8,7 @@ resources:
     type: git-branches
     source:
       uri: https://github.com/diwakar-k/concourse_test
+      branch: main
 jobs:
   - name: createpipelines
     public: false
