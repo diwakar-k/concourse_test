@@ -24,7 +24,7 @@ jobs:
       - get: demo
         trigger: true
       - task: createpipelines
-        file: demo/create-pipeline.yml
+        file: ./create-pipeline.yml
       - put: storage
         inputs: 
           - output
