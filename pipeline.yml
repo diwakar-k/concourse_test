@@ -5,7 +5,7 @@ resource_types:
     repository: vito/git-branches-resource
 resources:
   - name: demo
-    type: git-branches
+    type: git
     source:
       uri: https://github.com/diwakar-k/concourse_test
       branch: main
