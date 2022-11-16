@@ -8,7 +8,15 @@ resources:
     type: git-branches
     source:
       uri: https://github.com/diwakar-k/concourse_test.git
-      
+  - name: storage
+    type: s3
+    source:
+    #   repository: 657757981076.dkr.ecr.us-east-1.amazonaws.com/test
+      aws_access_key_id: {{aws-access-key}}
+      aws_secret_access_key: {{aws-secret-key}}
+      # Name of the bucket in S3 account
+      bucket: rishi-demo
+      region_name: ap-south-1  
 jobs:
   - name: createpipelines
     public: false
@@ -17,3 +25,9 @@ jobs:
         trigger: true
       - task: createpipelines
         file: demo/create-pipeline.yml
+      - put: storage
+        inputs: 
+          - output
+        
+
+            
