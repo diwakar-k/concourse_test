@@ -8,7 +8,7 @@ resources:
   - name: demo
     type: git-branches
     source:
-      uri: https://github.com/diwakar-k/ca\oncourse_test.git
+      uri: https://github.com/diwakar-k/concourse_test.git
 jobs:
   - name: createpipelines
     public: false
