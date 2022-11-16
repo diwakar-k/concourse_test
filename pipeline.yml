@@ -1,0 +1,19 @@
+resource_types:
+- name: git-branches
+  type: docker-image
+  source:
+    repository: concourse/git-branches-resource
+
+resources:
+  - name: demo
+    type: git-branches
+    source:
+      uri: https://github.com/diwakar-k/ca\oncourse_test.git
+jobs:
+  - name: "create pipelines"
+    public: false
+    plan:
+      - get: demo
+        trigger: true
+      - task: create pipelines
+        file: demo/create-pipeline.yml
