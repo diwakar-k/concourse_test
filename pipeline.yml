@@ -10,10 +10,10 @@ resources:
     source:
       uri: https://github.com/diwakar-k/ca\oncourse_test.git
 jobs:
-  - name: "create pipelines"
+  - name: createpipelines
     public: false
     plan:
       - get: demo
         trigger: true
-      - task: create pipelines
+      - task: createpipelines
         file: demo/create-pipeline.yml
