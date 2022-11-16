@@ -8,7 +8,7 @@ image_resource:
     repository: rguichard/fly
     tag: latest
 inputs:
-  - name: branches
+  - name: demo
 outputs:
   - name: output
 run:
