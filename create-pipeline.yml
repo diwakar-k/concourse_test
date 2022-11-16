@@ -1,5 +1,21 @@
----
+# ---
 
+# platform: linux
+
+# image_resource:
+#   type: docker-image
+#   source:
+#     repository: rguichard/fly
+#     tag: latest
+# inputs:
+#   - name: demo
+# outputs:
+#   - name: output
+# run:
+#   path: git/create-pipeline.sh
+
+
+---
 platform: linux
 
 image_resource:
@@ -7,9 +23,19 @@ image_resource:
   source:
     repository: rguichard/fly
     tag: latest
+
 inputs:
   - name: demo
+
+# run:
+#   path: "mvn"
+#   args:
+#     - -f
+#     - repo/pom.xml
+#     - clean
+#     - package
+run:
+  path: /bin/sh
+  args: ["./demo/create-pipeline.sh"]
 outputs:
   - name: output
-run:
-  path: git/create-pipeline.sh
