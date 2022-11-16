@@ -5,10 +5,10 @@ resource_types:
     repository: vito/git-branches-resource
 resources:
   - name: demo
-    type: git
+    type: git-branches
     source:
-      uri: https://github.com/diwakar-k/concourse_test
-      branch: main
+      uri: https://github.com/diwakar-k/concourse_test.git
+      
 jobs:
   - name: createpipelines
     public: false
