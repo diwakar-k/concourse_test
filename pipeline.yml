@@ -24,10 +24,10 @@ jobs:
             source:
               repository: rguichard/fly
               tag: latest
-          inputs:
-            - name: branches
-          outputs:
-            - name: output
+        #   inputs:
+        #     - name: branches
+        #   outputs:
+        #     - name: output
           run:
             path: entrypoint.sh
             args:
