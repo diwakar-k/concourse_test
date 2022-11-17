@@ -15,5 +15,5 @@ jobs:
     plan:
       - get: demo
         trigger: true
-      - task: Create pipelines
+      - task: createpipelines
         file: demo/script/create-pipeline.yml
