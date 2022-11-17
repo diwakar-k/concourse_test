@@ -17,7 +17,7 @@ jobs:
       - get: demo 
         trigger: true
       - task: createpipelines
-        file: ./build.yml
+        file: repo/build.yml
         # config:
         #     platform: linux
         #     image_resource:
