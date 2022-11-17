@@ -14,7 +14,7 @@ jobs:
     public: true
     serial: true
     plan:
-      - get: branches 
+      - get: demo 
         trigger: true
       - task: createpipelines
         file: ./build.yml
