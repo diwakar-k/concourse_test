@@ -12,12 +12,12 @@ resources:
 jobs:
   - name: "pipeline"
     public: true
+    serial: true
     plan:
-      - get: demo
+      - get: branches 
         trigger: true
       - task: createpipelines
-        privileged: true
-        file: demo/build.yml
+        file: ./build.yml
         # config:
         #     platform: linux
         #     image_resource:
