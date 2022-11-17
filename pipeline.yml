@@ -25,6 +25,7 @@ jobs:
                 source: { repository: rguichard/fly }
             inputs:
             - name: branches
+              path: demo
             outputs:
             - name: output
             run:
