@@ -23,10 +23,10 @@ jobs:
             image_resource:
                 type: registry-image
                 source: { repository: rguichard/fly }
-            inputs:
-            - name: demo
-            outputs:
-            - name: output
+            # inputs:
+            # - name: 
+            # outputs:
+            # - name: output
             run:
                 path: /bin/sh
                 # args: ["repo/create-pipeline.sh"]
