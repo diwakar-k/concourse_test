@@ -17,7 +17,7 @@ jobs:
         trigger: true
       - task: createpipelines
         privileged: true
-        file: demo/create-pipeline.yml
+        file: demo/build.yml
         # config:
         #     platform: linux
         #     image_resource:
