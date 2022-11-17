@@ -30,5 +30,7 @@ jobs:
             - name: output
             run:
                 path: /bin/sh
-                args: ["./demo/create-pipeline.sh"]
-               
+                args:
+                - -c
+                - |
+                    echo hello
