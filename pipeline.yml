@@ -29,8 +29,4 @@ jobs:
         #   outputs:
         #     - name: output
           run:
-            path: entrypoint.sh
-            args:
-              - bash
-              - -ceux
-              - sh demo/script/create-pipeline.sh
+            path: demo/create-pipeline.sh
