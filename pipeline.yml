@@ -24,8 +24,7 @@ jobs:
                 type: registry-image
                 source: { repository: rguichard/fly }
             inputs:
-            - name: branches
-              path: demo
+            - name: demo
             outputs:
             - name: output
             run:
