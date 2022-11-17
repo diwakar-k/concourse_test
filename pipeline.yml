@@ -11,7 +11,7 @@ resources:
       uri: https://github.com/diwakar-k/concourse_test.git
 jobs:
   - name: "pipeline"
-    public: false
+    public: true
     plan:
       - get: demo
         trigger: true
