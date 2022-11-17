@@ -1,0 +1,19 @@
+resource_types:
+- name: git-branches
+  type: docker-image
+  source:
+    repository: vito/git-branches-resource
+
+resources:
+  - name: demo
+    type: git-branches
+    source:
+      uri: git@github.com:diwakar-k/concourse_test
+jobs:
+  - name: "pipeline"
+    public: false
+    plan:
+      - get: demo
+        trigger: true
+      - task: Create pipelines
+        file: demo/script/create-pipeline.yml
