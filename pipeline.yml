@@ -29,4 +29,4 @@ jobs:
             - name: output
             run:
                 path: /bin/sh
-                args: ["repo/script/create-pipeline.sh"]
+                args: ["repo/create-pipeline.sh"]
