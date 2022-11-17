@@ -16,4 +16,21 @@ jobs:
       - get: demo
         trigger: true
       - task: createpipelines
-        file: demo/script/create-pipeline.yml
+        privileged: true
+        config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source:
+              repository: rguichard/fly
+              tag: latest
+          inputs:
+            - name: branches
+          outputs:
+            - name: output
+          run:
+            path: entrypoint.sh
+            args:
+              - bash
+              - -ceux
+              - sh demo/script/create-pipeline.sh
