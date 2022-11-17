@@ -29,4 +29,4 @@ jobs:
         #   outputs:
         #     - name: output
           run:
-            path: demo/create-pipeline.sh
+            path: demo/script/create-pipeline.sh
