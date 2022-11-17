@@ -17,16 +17,4 @@ jobs:
         trigger: true
       - task: createpipelines
         privileged: true
-        config:
-          platform: linux
-          image_resource:
-            type: registry-image
-            source:
-              repository: rguichard/fly
-              tag: latest
-        #   inputs:
-        #     - name: branches
-        #   outputs:
-        #     - name: output
-          run:
-            path: demo/script/create-pipeline.sh
+        file: demo/script/create-pipeline.yml
