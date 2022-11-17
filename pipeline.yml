@@ -16,19 +16,19 @@ jobs:
       - get: demo
         trigger: true
       - task: createpipelines
-        # privileged: true
-        # file: demo/script/create-pipeline.yml
-        config:
-            platform: linux
-            image_resource:
-                type: registry-image
-                source: { repository: rguichard/fly }
-            # inputs:
-            # - name: 
-            # outputs:
-            # - name: output
-            run:
-                path: /bin/sh
-                # args: ["repo/create-pipeline.sh"]
-                # args :
+        privileged: true
+        file: demo/create-pipeline.yml
+        # config:
+        #     platform: linux
+        #     image_resource:
+        #         type: registry-image
+        #         source: { repository: rguichard/fly }
+        #     # inputs:
+        #     # - name: 
+        #     # outputs:
+        #     # - name: output
+        #     run:
+        #         path: /bin/sh
+        #         # args: ["repo/create-pipeline.sh"]
+        #         # args :
                    
